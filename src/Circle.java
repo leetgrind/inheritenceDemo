@@ -10,4 +10,8 @@ public class Circle extends Shape{
     public double area(){
         return Math.PI*radius*radius;
     }
+
+    public void special() {
+        System.out.println("I use PI. So i am special");
+    }
 }

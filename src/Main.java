@@ -42,15 +42,25 @@ public class Main {
     public static void main(String[] args) {
 
         Shape[] shapes = new Shape[4];
-        //change
 
-        shapes[0] = new Circle(10);
+        shapes[0] = new Sphere(10);
         shapes[1] = new Rectangle(11, 23);
         shapes[2] = new Square(23);
         shapes[3] = new Triangle(10, 20);
 
         for (Shape abc: shapes) {
-            printArea(abc);
+
+
+            if(abc instanceof Sphere) {
+
+                Sphere sphereObj = (Sphere) abc;
+                System.out.println(sphereObj.volume());
+                printArea(abc);
+                System.out.println("-----------");
+            }
+            else {
+                printArea(abc);
+            }
         }
     }
 
